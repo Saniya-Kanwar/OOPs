@@ -17,11 +17,25 @@ public:
   }
   */
   
+ 
   
-  Student(string a,int b,int c){
+  
+  /*Student(string a,int b,int c){
     name=a;
     age=b;
     roll_no = c;
+ 
+    cout<<name<<endl;
+    cout<<age<<endl;
+    cout<<roll_no;
+  }
+  */
+  
+  //use of this pointer
+  Student(string name,int age,int roll_no){
+    this->name=name;
+    this->age=age;
+    (*this).roll_no= roll_no;
  
     cout<<name<<endl;
     cout<<age<<endl;
