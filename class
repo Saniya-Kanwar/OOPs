@@ -1,0 +1,27 @@
+#include <iostream>
+using namespace std;
+
+// Student class
+class Student
+{
+public:
+  // properties/data members
+  string name;
+  int age;
+  int rool_no ;
+   // Methods/brhaviors
+   void study()
+   {
+     cout<<name<<" is studying"<<endl;
+   }
+};
+
+int main() 
+{
+    Student object;
+    // dot operator: access properties & methods of a class
+    object.name = "Saniya";
+    object.age = 20;
+    object.study();
+    return 0;
+}
