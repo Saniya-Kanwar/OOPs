@@ -1,0 +1,34 @@
+Ques: getter and setter
+#include <iostream>
+using namespace std;
+
+//Encapsulatio/Abstraction
+class Student
+{
+  //properties are private
+  string name;
+  int age;
+  int roll;
+  
+  public:
+  void setter(string n,int a,int r)  // to set data
+  {
+    name = n;
+    age = a;
+    roll = r;
+  }
+  
+  int getter()      // to get data
+  {
+    return age;
+  }
+  
+};
+
+int main() 
+{
+  Student obj;
+  obj.setter("Saniya",20,445);
+  cout<<obj.getter();
+  return 0;
+}
