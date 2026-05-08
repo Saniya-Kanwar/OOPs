@@ -10,6 +10,17 @@ class Student
   int roll;
   
   public:
+  //Function overloading
+  int area(int r)
+  {
+    return (r*r);
+  }
+  
+  int area(int a, int b)
+  {
+    return (a*b); 
+  }
+  
   void setter(string n,int a,int r)  // to set data
   {
     name = n;
@@ -35,5 +46,7 @@ int main()
   obj.setter("Saniya",20,445);
   cout<<obj.getter()<<endl;
   obj.display();
+  cout<<endl<<obj.area(3);
+  cout<<endl<<obj.area(3,4);
   return 0;
 }
