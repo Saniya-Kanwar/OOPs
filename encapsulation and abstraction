@@ -1,4 +1,3 @@
-Ques: getter and setter
 #include <iostream>
 using namespace std;
 
@@ -23,12 +22,18 @@ class Student
     return age;
   }
   
+  void display()
+  {
+    cout<<name<<" "<<age<<" "<<roll;
+  }
+  
 };
 
 int main() 
 {
   Student obj;
   obj.setter("Saniya",20,445);
-  cout<<obj.getter();
+  cout<<obj.getter()<<endl;
+  obj.display();
   return 0;
 }
