@@ -1,0 +1,30 @@
+#include <iostream>
+using namespace std; 
+
+// Runtime Polymorhism
+// virtual function
+class Human
+{
+  public:
+  virtual void display() // if virtual keyword not used then human will be printed   
+  {
+    cout<<"human"<<endl;
+  }
+};
+
+class Person : public Human
+{
+  public:
+  void display()
+  {
+    cout<<"person"<<endl;
+  }
+};
+
+int main() 
+{
+  Human *obj;
+  obj = new Person();
+  obj->display();
+  return 0;
+}
