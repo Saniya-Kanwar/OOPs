@@ -1,0 +1,47 @@
+#include <iostream>
+using namespace std;
+//Operator Overloading
+class Complex
+{
+  //properties
+  int real;
+  int img;
+  
+  public :
+  
+  Complex(){      //default constructor for complex ans because it does not have parameter
+    
+  }
+  Complex(int real,int img)
+  {
+    this->real = real;
+    this->img = img;
+  }
+  
+  Complex operator + (Complex &c) // datatype is complex ,operator represent c1 obj, c is reference of c2 object
+  {
+    Complex ans;
+    ans.real =real + c.real; //real of c2 is c.real
+    ans.img = img + c.img;
+    return ans;
+  }
+  
+  void display()
+  {
+    cout<<real<<"+"<<img<<"i"<<endl;
+  }
+ 
+};
+
+int main()
+{
+  Complex c1(3,2);
+  c1.display();
+  Complex c2(4,5);
+  c2.display();
+  Complex c3=c1+c2;
+  c3.display();
+  return 0;
+}
+  
+  
