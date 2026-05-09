@@ -1,0 +1,47 @@
+#include <iostream>
+using namespace std;
+
+//Inheritance
+class Human
+{
+  //properties
+  protected:
+  string name;
+};
+
+//Single Level
+class Person : public Human
+{
+  protected:
+  int age;
+  
+};
+
+// Multilevel
+class Student : public Person
+{
+  int roll;
+  
+  public:
+  Student(string n,int a,int r)
+  {
+    name =n;
+    age = a;
+    roll = r;
+  }
+  
+  void display()
+  {
+    cout<<name<<" "<<age<<" "<<roll<<endl;
+  }
+};
+  
+int main()
+{
+  Student obj("Saniya",2,3);
+  obj.display();
+  return 0;
+}
+  
+  
+  
